@@ -26,9 +26,9 @@ pipeline {
         
         stage ('run') {
             steps {
-                
+                    dir ('Amazon'){
                     sh 'cp Amazon/Amazon-Web/target/*.war /opt/tomcat/webapps'
-                
+                    }
             }
         }
     }
