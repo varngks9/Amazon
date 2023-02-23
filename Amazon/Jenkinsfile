@@ -23,7 +23,13 @@ pipeline {
                 
             }
         }
-        
+        stage ('run') {
+        steps {
+            dir ('Amazon/Amazon/Amazon-Web'){
+                sh 'cp target/*.war /opt/tomcat/webapps'
+            }
+          }
+        }
        
     }
 }
